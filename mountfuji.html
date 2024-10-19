@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Fuji</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css"> <!-- Link to modal CSS -->
+</head>
+<body>
+    <header>
+        <h1>Mount Fuji</h1>
+    </header>
+
+    <section id="place-details">
+        <img id="fujiImage" src="images/mountfuji.jpg" alt="Mount Fuji" onclick="openModal();">
+        
+        <div class="info">
+            <h3>About Mount Fuji</h3>
+            <p>Mount Fuji is Japan's highest peak, standing at 3,776 meters (12,389 feet) and is an active stratovolcano.</p>
+            <p>Located about 100 kilometers southwest of Tokyo, it is an iconic symbol of Japan, famous for its symmetrical cone shape and stunning beauty, especially when capped with snow. Mount Fuji is surrounded by five lakes (Fujigoko) and numerous hot springs, making it a popular destination for both tourists and locals.</p>
+            <p>The mountain is a sacred site in Japanese culture and has inspired countless works of art and literature. It is also a UNESCO World Heritage Site, recognized for its cultural significance. Hiking to the summit is a popular activity during the climbing season from July to September, offering breathtaking views of the surrounding landscape.</p>
+            <ul>
+                <li>Height: 3,776 meters (12,389 feet)</li>
+                <li>Location: Yamanashi and Shizuoka Prefectures, Japan</li>
+                <li>Type: Stratovolcano</li>
+                <li>UNESCO World Heritage Site: Yes</li>
+                <li>First Ascent: 663 AD (according to legend)</li>
+            </ul>
+        </div>
+
+        <div class="hours">
+            <h3>Opening Hours</h3>
+            <p>The climbing season is from early July to early September. Off-season access is possible but requires caution.</p>
+        </div>
+
+        <div class="visiting-tips">
+            <h3>Visiting Tips</h3>
+            <ul>
+                <li>Plan your visit during the climbing season for the best experience.</li>
+                <li>Dress in layers; weather can change quickly at higher altitudes.</li>
+                <li>Stay hydrated and bring snacks for the hike.</li>
+                <li>Respect the local customs and natural environment.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modal for enlarged image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal();">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>Visit Mount Fuji, a symbol of Japan's natural beauty!</p>
+    </footer>
+
+    <script>
+        // JavaScript to open and close the modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImage").src = document.getElementById("fujiImage").src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

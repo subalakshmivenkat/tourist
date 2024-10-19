@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Opera House</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css"> <!-- Link to modal CSS -->
+</head>
+<body>
+    <header>
+        <h1>Sydney Opera House</h1>
+    </header>
+
+    <section id="place-details">
+        <img id="operaHouseImage" src="images/sydneyoperahouse.jpg" alt="Sydney Opera House" onclick="openModal();">
+        
+        <div class="info">
+            <h3>About the Sydney Opera House</h3>
+            <p>The Sydney Opera House is one of the most recognizable and iconic structures in the world.</p>
+            <p>Located on Bennelong Point in Sydney Harbour, it was designed by Danish architect Jørn Utzon and opened in 1973. The building's unique shell-like design has made it a masterpiece of modern architecture and a UNESCO World Heritage Site.</p>
+            <p>It serves as a multi-venue performing arts center, hosting a variety of events, including opera, ballet, theater, and concerts. The site also offers guided tours, providing visitors with insights into its architectural significance and history.</p>
+            <ul>
+                <li>Architect: Jørn Utzon</li>
+                <li>Opened: 1973</li>
+                <li>Location: Bennelong Point, Sydney, Australia</li>
+                <li>Style: Modern architecture</li>
+                <li>Capacity: Over 5,000 seats in various venues</li>
+            </ul>
+        </div>
+
+        <div class="hours">
+            <h3>Opening Hours</h3>
+            <p>Daily: 9:00 AM - 5:00 PM (hours may vary for performances).</p>
+        </div>
+
+        <div class="visiting-tips">
+            <h3>Visiting Tips</h3>
+            <ul>
+                <li>Book tickets for performances in advance.</li>
+                <li>Join a guided tour for a deeper understanding of the site.</li>
+                <li>Explore the surrounding gardens and harbor views.</li>
+                <li>Visit the nearby Royal Botanic Garden for a scenic walk.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modal for enlarged image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal();">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>Experience the beauty of the Sydney Opera House!</p>
+    </footer>
+
+    <script>
+        // JavaScript to open and close the modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImage").src = document.getElementById("operaHouseImage").src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

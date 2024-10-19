@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Canyon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css"> <!-- Link to modal CSS -->
+</head>
+<body>
+    <header>
+        <h1>Grand Canyon</h1>
+    </header>
+
+    <section id="place-details">
+        <img id="canyonImage" src="images/grandcanyon.jpg" alt="Grand Canyon" onclick="openModal();">
+        
+        <div class="info">
+            <h3>About the Grand Canyon</h3>
+            <p>The Grand Canyon is a vast canyon in Arizona, USA, carved by the Colorado River.</p>
+            <p>It is one of the most recognizable natural wonders in the world, stretching 277 miles long and up to 18 miles wide. The Grand Canyon is known for its stunning geological formations, colorful layers of rock, and breathtaking views. It was designated a national park in 1919 and is a UNESCO World Heritage Site, attracting millions of visitors each year.</p>
+            <p>Visitors can explore the canyon by hiking, rafting, or taking scenic drives along the rims. The South Rim is the most accessible and offers numerous viewpoints and visitor facilities.</p>
+            <ul>
+                <li>Location: Arizona, USA</li>
+                <li>Length: 277 miles</li>
+                <li>Width: Up to 18 miles</li>
+                <li>Established: National Park in 1919</li>
+                <li>UNESCO World Heritage Site</li>
+            </ul>
+        </div>
+
+        <div class="hours">
+            <h3>Opening Hours</h3>
+            <p>Open year-round, 24 hours a day (visitor centers have specific hours)</p>
+        </div>
+
+        <div class="visiting-tips">
+            <h3>Visiting Tips</h3>
+            <ul>
+                <li>Plan your visit during spring or fall for milder weather.</li>
+                <li>Bring plenty of water and snacks for hiking.</li>
+                <li>Take advantage of ranger-led programs for deeper insights.</li>
+                <li>Don’t forget your camera for capturing the stunning views!</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modal for enlarged image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal();">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>Visit the Grand Canyon, a natural wonder of the world!</p>
+    </footer>
+
+    <script>
+        // JavaScript to open and close the modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImage").src = document.getElementById("canyonImage").src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
