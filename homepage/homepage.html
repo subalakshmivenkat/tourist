@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bon Voyage</title>
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="animation-container">
+        <div id="world-map-animation"></div>
+    </div>
+    <div class="header">
+        <div class="welcome">
+            Welcome to Bon Voyage
+            <div class="logo">
+                <img src="./logo.png" alt="Logo">
+            </div>
+        </div>
+
+        <div class="search-filter-container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for country...">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+
+            <div class="filter">
+                <select id="continentSelect">
+                    <option value="All">All Continents</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="North America">North America</option>
+                    <option value="Oceania">Oceania</option>
+                    <option value="South America">South America</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Europe Asia">Europe Asia</option>
+                </select>
+                <button onclick="filterByContinent()">Apply Filter</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="country-grid">
+        <div class="country-item" data-continent="Asia">
+            <a href="country-page.html">
+                <img src="./afganistan.png" alt="Afganistan">
+                <p>AFGANISTAN</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Europe">
+            <a href="country-page.html">
+                <img src="./albania.jpeg" alt="Albania">
+                <p>ALBANIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./algeria.jpg" alt="Algeria">
+                <p>ALGERIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Europe">
+            <a href="country-page.html">
+                <img src="./andorara.jpg" alt="Andorra">
+                <p>ANDORRA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./angola.jpg" alt="Angola">
+                <p>ANGOLA</p>
+            </a>
+        </div>
+      
+        <div class="country-item" data-continent="North America">
+            <a href="country-page.html">
+                <img src="./antigua.jpg" alt="Antigua and Barbuda">
+                <p>ANTIGUA AND BARBUDA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="South America">
+            <a href="country-page.html">
+                <img src="./argentina.jpg" alt="Argentina">
+                <p>ARGENTINA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Asia">
+            <a href="country-page.html">
+                <img src="./armenia.jpg" alt="Armenia">
+                <p>ARMENIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Oceania">
+            <a href="country-page.html">
+                <img src="./australia.jpg" alt="AUSTRALIA">
+                <p>AUSTRALIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Europe">
+            <a href="country-page.html">
+                <img src="./austria.jpg" alt="Austria">
+                <p>AUSTRIA</p>
+            </a>
+        </div>
+
+        <div class="country-item" data-continent="EuropeAsia">
+            <a href="country-page.html">
+                <img src="./Azerbaijan.jpg" alt="Azerbaijan">
+                <p>AZERBAIJAN</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="North America">
+            <a href="country-page.html">
+                <img src="./bahamas.jpg" alt="BAHAMAS">
+                <p>BAHAMAS</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Asia">
+            <a href="country-page.html">
+                <img src="./bahrain.jpg" alt="BAHRAIN">
+                <p>BAHRAIN</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Asia">
+            <a href="country-page.html">
+                <img src="./bangladesh.jpg" alt="BANGLADESH">
+                <p>BANGLADESH</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="North America">
+            <a href="country-page.html">
+                <img src="./barbadas.jpg" alt="BARBADOS">
+                <p>BARBADOS</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Europe">
+            <a href="country-page.html">
+                <img src="./Belarus.jpg" alt="BELARUS">
+                <p>BELARUS</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Europe">
+            <a href="country-page.html">
+                <img src="./belgium.jpg" alt="BELGIUM">
+                <p>BELGIUM</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="North America">
+            <a href="country-page.html">
+                <img src="./BELIZE.jpg" alt="BELIZE">
+                <p>BELIZE</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./BENIN.jpg" alt="BENIN">
+                <p>BENIN</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Asia">
+            <a href="country-page.html">
+                <img src="./Bhutan.jpg" alt="BHUTAN">
+                <p>BHUTAN</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="South America">
+            <a href="country-page.html">
+                <img src="./BOLIVIA.jpg" alt="BOLIVIA">
+                <p>BOLIVIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Europe">
+            <a href="country-page.html">
+                <img src="./BOSNIA AND HERZEGOVINA.jpg" alt="BOSNIA AND HERZEGOVINA">
+                <p>BOSNIA AND HERZEGOVINA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./BOTSWANA.jpg" alt="BOTSWANA">
+                <p>BOTSWANA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="South America">
+            <a href="country-page.html">
+                <img src="./BRAZIL.jpg" alt="BRAZIL">
+                <p>BRAZIL</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Asia">
+            <a href="country-page.html">
+                <img src="./brunei.jpg" alt="BRUNEI">
+                <p>BRUNEI</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Europe">
+            <a href="country-page.html">
+                <img src="./BULGARIA.jpg" alt="BULGARIA">
+                <p>BULGARIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./BURKINA FASO.jpg" alt="BURKINA FASO">
+                <p>BURKINA FASO</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./BURUNDI.jpg" alt="BURUNDI">
+                <p>BURUNDI</p>
+            </a>
+        </div>
+       
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./CABO VERDE.jpg" alt="CABO VERDE">
+                <p>CABO VERDE</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Asia">
+            <a href="country-page.html">
+                <img src="./cambodia.jpg" alt="CAMBODIA">
+                <p>CAMBODIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./CAMEROON.jpg" alt="CAMEROON">
+                <p>CAMEROON</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="North America">
+            <a href="country-page.html">
+                <img src="./CANADA.jpg" alt="CANADA">
+                <p>CANADA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="Africa">
+            <a href="country-page.html">
+                <img src="./Central Africa.jpg" alt=" AFRICACENTRALN REPUBLIC">
+                <p>CENTRAL AFRICAN REPUBLIC</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="India">
+            <a href="india.html">
+                <img src="./Flag_of_India.svg.webp" alt="India">
+                <p>INDIA</p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="">
+            <a href="country-page.html">
+                <img src="" alt="">
+                <p></p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="">
+            <a href="country-page.html">
+                <img src="" alt="">
+                <p></p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="">
+            <a href="country-page.html">
+                <img src="" alt="">
+                <p></p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="">
+            <a href="country-page.html">
+                <img src="" alt="">
+                <p></p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="">
+            <a href="country-page.html">
+                <img src="" alt="">
+                <p></p>
+            </a>
+        </div>
+        <div class="country-item" data-continent="">
+            <a href="country-page.html">
+                <img src="" alt="">
+                <p></p>
+            </a>
+        </div>
+        <!-- Add more country items here -->
+    </div>
+    <div class="no-results" style="display: none;">No results found!</div>
+
+    <div class="footer">
+        &copy; 2024 Bon Voyage. All rights reserved.
+    </div>
+
+    <script src="scriptss.js"></script>
+</body>
+</html>

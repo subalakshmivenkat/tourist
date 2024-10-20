@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Lora', serif;
+    background: url('images/tajmahal.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(8, 8, 8, 0.85);
+    box-shadow: 0 4px 15px rgba(246, 243, 243, 0.929);
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: #fffefe;
+    text-shadow: 2px 2px 4px rgb(244, 239, 239);
+}
+
+/* Place details section */
+#place-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+#place-details img {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#place-details img:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.info h3 {
+    font-size: 2rem;
+    color: #bc1d1d;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ede6e6;
+}
+
+.info ul {
+    list-style-type: none;
+    margin-top: 10px;
+    color: wheat;
+}
+
+.info li {
+    font-size: 1.4rem;
+    margin: 5px 0;
+}
+
+/* Hours and visiting tips styling */
+.hours, .visiting-tips {
+    background: rgba(10, 10, 10, 0.9);
+    max-width: 700px;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(239, 237, 237, 0.905);
+}
+
+.hours h3, .visiting-tips h3 {
+    font-size: 1.8rem;
+    color: #cd2727;
+}
+
+.hours p, .visiting-tips ul li {
+    font-size: 1.5rem;
+    color: #f2eaea;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close {
+    display: grid;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #FF6347;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* Keyframes for smooth modal animation */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #place-details img {
+        width: 90%;
+    }
+
+    .info, .hours, .visiting-tips {
+        max-width: 100%;
+    }
+
+    .modal-content {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .info h3, .hours h3, .visiting-tips h3 {
+        font-size: 1.5rem;
+    }
+
+    .info p, .hours p, .visiting-tips p {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

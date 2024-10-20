@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Journey - Authentication</title>
+    <link href="homepage/homepage.html">
+    <link rel="stylesheet" href="./style.css"> <!-- Updated CSS file path -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="animation-container">
+        <!-- Background animation (if any) -->
+        <div id="world-map-animation"></div>
+    </div>
+    <div class="container">
+        <img src="./logo.png" alt="Happy Journey Logo" class="logo">
+        <h2>Happy Journey</h2>
+        <div id="auth-section">
+            <!-- Login Form -->
+            <div id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="login-email" placeholder="Enter your Gmail">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="login-password" name="login-password" placeholder="Enter your password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">
+                            <i id="login-password-icon" class="fa fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="login()">Log In</button>
+                </div>
+                <div class="links">
+                    <a href="#" onclick="showSignup()">Don't have an account? Sign Up</a><br>
+                    <a href="#" onclick="showForgotPassword()">Forgot Password?</a>
+                </div>
+            </div>
+            
+            <!-- Signup Form -->
+            <div id="signup-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="signup-email" placeholder="Enter your Gmail">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="signup-password" name="signup-password" placeholder="Enter your password" oninput="checkPasswordStrength()">
+                        <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">
+                            <i id="signup-password-icon" class="fa fa-eye"></i>
+                        </span>
+                        <div id="password-strength" class="strength"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password:</label>
+                    <div class="password-container">
+                        <input type="password" id="signup-confirm-password" name="signup-confirm-password" placeholder="Confirm your password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility('signup-confirm-password')">
+                            <i id="signup-confirm-password-icon" class="fa fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="signup()">Sign Up</button>
+                </div>
+                <div class="links">
+                    <a href="#" onclick="showLogin()">Already have an account? Log In</a>
+                </div>
+            </div>
+            
+            <!-- Forgot Password Form -->
+            <div id="forgot-password-form" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label for="forgot-email">Email:</label>
+                    <input type="email" id="forgot-email" name="forgot-email" placeholder="Enter your Gmail">
+                </div>
+                <div class="form-group">
+                    <button type="button" onclick="forgotPassword()">Reset Password</button>
+                </div>
+                <div class="links">
+                    <a href="#" onclick="showLogin()">Back to Log In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="login.js"></script>
+    <link href="homepage/homepage.html">
+    <script  src="./scripts.js"></script> <!-- Updated JS file path -->
+</body>
+</html>

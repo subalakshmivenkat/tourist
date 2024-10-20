@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Mahal</title>
+    <link rel="stylesheet" href="tajmahal.css">
+    <link rel="stylesheet" href="modal.css"> <!-- Link to modal CSS -->
+</head>
+<body>
+    <header>
+        <h1>Taj Mahal</h1>
+    </header>
+
+    <section id="place-details">
+        <img id="tajImage" src="images/tajmahal.jpg" alt="Taj Mahal" onclick="openModal();">
+        
+        <div class="info">
+            <h3>About the Taj Mahal</h3>
+            <p>The Taj Mahal is an iconic white marble mausoleum located in Agra, India.</p>
+            <p>The Taj Mahal is located on the right bank of the Yamuna River in a vast Mughal garden that encompasses nearly 17 hectares, in the Agra District in Uttar Pradesh. It was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal with construction starting in 1632 AD and completed in 1648 AD, with the mosque, the guest house and the main gateway on the south, the outer courtyard and its cloisters were added subsequently and completed in 1653 AD. The existence of several historical and Quaranic inscriptions in Arabic script have facilitated setting the chronology of Taj Mahal. For its construction, masons, stone-cutters, inlayers, carvers, painters, calligraphers, dome builders and other artisans were requisitioned from the whole of the empire and also from the Central Asia and Iran. Ustad-Ahmad Lahori was the main architect of the Taj Mahal.</p>
+            <p>The Taj Mahal is considered to be the greatest architectural achievement in the whole range of Indo-Islamic architecture. Its recognised architectonic beauty has a rhythmic combination of solids and voids, concave and convex and light shadow; such as arches and domes further increases the aesthetic aspect. The colour combination of lush green scape reddish pathway and blue sky over it show cases the monument in ever changing tints and moods. The relief work in marble and inlay with precious and semi precious stones make it a monument apart. </p>
+            <ul>
+                <li>Built by: Mughal emperor Shah Jahan</li>
+                <li>In memory of: His wife Mumtaz Mahal</li>
+                <li>Location: Agra, India</li>
+                <li>Style: Mughal architecture</li>
+                <li>Material: White marble</li>
+            </ul>
+        </div>
+
+        <div class="hours">
+            <h3>Opening Hours</h3>
+            <p>6:00 AM - 7:00 PM</p>
+        </div>
+
+        <div class="visiting-tips">
+            <h3>Visiting Tips</h3>
+            <ul>
+                <li>Arrive early to avoid crowds.</li>
+                <li>Wear comfortable shoes for walking.</li>
+                <li>Don't forget your camera for stunning photos.</li>
+                <li>Stay hydrated, especially during summer.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Modal for enlarged image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal();">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>Visit the Taj Mahal, one of the Seven Wonders of the World!</p>
+    </footer>
+
+    <script>
+        // JavaScript to open and close the modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modalImage").src = document.getElementById("tajImage").src;
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
